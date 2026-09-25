@@ -2,28 +2,41 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import {
   LayoutDashboard,
-  Package,
   ShoppingCart,
   Users,
   MessageSquare,
-  CalendarDays,
   Settings,
   LogOut,
   X,
   Image,
-  Star,
   ChevronsLeft,
   ChevronsRight,
-  Bell,
-  Wrench,
   FolderKanban,
 } from "lucide-react";
 
 // // import logo from "../../assets/image/Logo/Logo.png";
 // // import axiosInstance from "../../api/axiosInstance";
 import { adminLogout } from "../../Services/admin.api";
+import brandLogo from "../../assets/brand-logo.webp";
 
-const menuGroups = [{ label: "Workspace", items: [{ name: "Dashboard", icon: LayoutDashboard, path: "/admin" }, { name: "Conversations", icon: MessageSquare, path: "/admin/conversations" }, { name: "Clients", icon: Users, path: "/admin/clients" }, { name: "Projects", icon: FolderKanban, path: "/admin/projects" }, { name: "Homepage CMS", icon: Image, path: "/admin/homepage" }, { name: "Quotes", icon: ShoppingCart, path: "/admin/quotes" }, { name: "Settings", icon: Settings, path: "/admin/settings" }] }];
+const menuGroups = [
+  {
+    label: "Workspace",
+    items: [
+      { name: "Dashboard", icon: LayoutDashboard, path: "/admin" },
+      {
+        name: "Conversations",
+        icon: MessageSquare,
+        path: "/admin/conversations",
+      },
+      { name: "Clients", icon: Users, path: "/admin/clients" },
+      { name: "Projects", icon: FolderKanban, path: "/admin/projects" },
+      { name: "Homepage CMS", icon: Image, path: "/admin/homepage" },
+      { name: "Quotes", icon: ShoppingCart, path: "/admin/quotes" },
+      { name: "Settings", icon: Settings, path: "/admin/settings" },
+    ],
+  },
+];
 
 function AdminSidebar({
   sidebarOpen,
@@ -35,7 +48,11 @@ function AdminSidebar({
   const navigate = useNavigate();
 
   async function handleLogout() {
-    try { await adminLogout(); } finally { navigate("/admin/login", { replace: true }); }
+    try {
+      await adminLogout();
+    } finally {
+      navigate("/admin/login", { replace: true });
+    }
   }
 
   return (
@@ -75,9 +92,7 @@ function AdminSidebar({
         <div className="flex items-center justify-between border-b border-white/10 px-5">
           <div className="flex min-w-0 items-center gap-3">
             <AnimatePresence>
-              
               {!collapsed && (
-                
                 <motion.div
                   initial={{ opacity: 0, width: 0 }}
                   animate={{ opacity: 1, width: "auto" }}
@@ -85,22 +100,22 @@ function AdminSidebar({
                   transition={{ duration: 0.2 }}
                   className="overflow-hidden"
                 >
-                 <div>
-                   <motion.img
-          src="/logo.png"
-          alt="Bytecode"
-          initial={{
-            opacity: 0,
-            y: -10,
-          }}
-          animate={{
-            opacity: 1,
-            y: 0,
-          }}
-          transition={{
-            duration: 0.5,
-          }}
-          className="
+                  <div>
+                    <motion.img
+                      src={brandLogo}
+                      alt="Bytecode"
+                      initial={{
+                        opacity: 0,
+                        y: -10,
+                      }}
+                      animate={{
+                        opacity: 1,
+                        y: 0,
+                      }}
+                      transition={{
+                        duration: 0.5,
+                      }}
+                      className="
             h-auto
             w-[150px]
             object-contain
@@ -108,9 +123,8 @@ function AdminSidebar({
             sm:w-[170px]
             lg:w-[190px]
           "
-        />
-                 
-                 </div>
+                    />
+                  </div>
                 </motion.div>
               )}
             </AnimatePresence>

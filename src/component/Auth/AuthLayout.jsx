@@ -1,14 +1,16 @@
 import { motion } from "framer-motion";
+import authBackground from "../../assets/auth-background.webp";
+import brandLogo from "../../assets/brand-logo.webp";
 
 function AuthLayout({ children }) {
   return (
     <main className="relative min-h-screen w-full overflow-hidden bg-[#050605]">
-
       {/* =========================================
           FULL SCREEN HERO IMAGE
       ========================================= */}
       <img
-        src="/image.png"
+        src={authBackground}
+        fetchPriority="high"
         alt="Bytecode workspace"
         className="
           absolute
@@ -65,7 +67,7 @@ function AuthLayout({ children }) {
         "
       >
         <motion.img
-          src="/logo.png"
+          src={brandLogo}
           alt="Bytecode"
           initial={{
             opacity: 0,
@@ -135,10 +137,7 @@ function AuthLayout({ children }) {
           "
         >
           Build something
-
-          <span className="block text-[#4ade80]">
-            extraordinary.
-          </span>
+          <span className="block text-[#4ade80]">extraordinary.</span>
         </h1>
 
         <p
@@ -152,8 +151,8 @@ function AuthLayout({ children }) {
             sm:text-base
           "
         >
-          Everything you need to create, manage and scale
-          your digital experience in one beautiful workspace.
+          Everything you need to create, manage and scale your digital
+          experience in one beautiful workspace.
         </p>
       </div>
 
@@ -190,7 +189,6 @@ function AuthLayout({ children }) {
           2xl:right-24
         "
       >
-
         {/* Green glow */}
         <div
           className="
@@ -205,9 +203,7 @@ function AuthLayout({ children }) {
 
         {/* Login page gets rendered here */}
         {children}
-
       </motion.div>
-
     </main>
   );
 }

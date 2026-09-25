@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Outlet } from "react-router-dom";
 import { Menu } from "lucide-react";
+import { Toaster } from "sonner";
 
 import AdminSidebar from "./AdminSidebar";
 import AdminNavbar from "./AdminNavbar";
@@ -38,6 +39,12 @@ function AdminLayout({ isNight, onThemeToggle }) {
       className={`admin-shell min-h-screen ${isNight ? "admin-night" : "admin-day"}`}
       style={theme}
     >
+      <Toaster
+        position="top-right"
+        theme={isNight ? "dark" : "light"}
+        richColors
+        closeButton
+      />
       {/* Sidebar */}
       <AdminSidebar
         sidebarOpen={sidebarOpen}
