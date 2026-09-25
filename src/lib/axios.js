@@ -21,7 +21,9 @@ NProgress.configure({
 
 const API_URL =
   import.meta.env.VITE_API_URL ||
-  "http://localhost:5001/api/v1";
+  (import.meta.env.PROD
+    ? "https://bytecode-server-6h8p.onrender.com/api/v1"
+    : "http://localhost:5001/api/v1");
 
 /*
 |--------------------------------------------------------------------------
@@ -62,7 +64,7 @@ api.interceptors.request.use(
     NProgress.done();
 
     return Promise.reject(error);
-  }
+  },
 );
 
 /*
@@ -98,19 +100,13 @@ api.interceptors.response.use(
         code: error.response.data?.code,
       });
     } else if (error.request) {
-      console.error(
-        "API Network Error:",
-        error.message
-      );
+      console.error("API Network Error:", error.message);
     } else {
-      console.error(
-        "API Request Error:",
-        error.message
-      );
+      console.error("API Request Error:", error.message);
     }
 
     return Promise.reject(error);
-  }
+  },
 );
 
 export default api;
