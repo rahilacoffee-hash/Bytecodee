@@ -1,0 +1,29 @@
+import React, { useEffect } from "react";
+import { useNavigate, useSearchParams } from "react-router-dom";
+import ClientChat from "../component/Chat/ClientChat";
+
+export default function ClientChatPage() {
+  const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
+
+  const conversationId = searchParams.get("conversationId");
+  const service = searchParams.get("service") || "CUSTOM";
+
+  // No conversation to load (direct visit, stale bookmark, refresh after
+  // the id was never set) — bounce back rather than render a broken chat.
+  useEffect(() => {
+    if (!conversationId) navigate("/", { replace: true });
+  }, [conversationId, navigate]);
+
+  if (!conversationId) return null;
+
+  return (
+    <div className="h-[100dvh] overflow-hidden bg-[#0a0a0a] text-white">
+      <ClientChat
+        conversationId={conversationId}
+        service={service}
+        onClose={() => navigate("/")}
+      />
+    </div>
+  );
+}

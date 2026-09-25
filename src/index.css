@@ -1,0 +1,272 @@
+@import "tailwindcss";
+
+.admin-shell {
+  background: var(--admin-page);
+  color: var(--admin-heading);
+  transition:
+    background-color 300ms ease,
+    color 300ms ease;
+}
+
+.admin-sidebar {
+  background: var(--admin-sidebar);
+  color: var(--admin-sidebar-text);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.24);
+}
+
+.admin-surface-panel,
+.admin-footer {
+  background: var(--admin-surface);
+  border-color: var(--admin-border);
+}
+
+.admin-hero-panel {
+  min-height: 250px;
+  box-shadow: inset 0 0 0 1px rgba(74, 222, 128, 0.08);
+}
+
+.admin-hero-mark {
+  position: absolute;
+  right: 7%;
+  bottom: -20%;
+  color: color-mix(in srgb, var(--admin-accent) 15%, transparent);
+  font-family: monospace;
+  font-size: 18rem;
+  line-height: 1;
+}
+
+.admin-kicker {
+  color: var(--admin-accent);
+  font-family: monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.admin-accent {
+  color: var(--admin-accent);
+}
+
+.admin-search,
+.admin-profile,
+.admin-dropdown {
+  border-color: var(--admin-border);
+  background: var(--admin-surface);
+  color: var(--admin-heading);
+}
+
+.admin-badge,
+.admin-avatar {
+  background: var(--admin-accent);
+  color: var(--admin-page);
+}
+
+.admin-logout {
+  border-color: var(--admin-border);
+  color: #dc5c5c;
+}
+
+.admin-logout:hover {
+  background: #dc5c5c;
+  color: #ffffff;
+}
+
+.admin-version {
+  border-color: var(--admin-border);
+  background: var(--admin-page);
+  color: var(--admin-heading);
+}
+
+.admin-search:focus {
+  outline: none;
+}
+
+.admin-dropdown-heading {
+  background: var(--admin-page);
+  border-color: var(--admin-border);
+}
+
+.admin-dropdown-link {
+  color: var(--admin-heading);
+}
+
+.admin-chart {
+  align-items: stretch;
+}
+
+.admin-chart span {
+  flex: 1;
+  min-width: 8px;
+  border-radius: 999px 999px 3px 3px;
+  background: linear-gradient(
+    180deg,
+    var(--admin-accent),
+    color-mix(in srgb, var(--admin-accent) 18%, transparent)
+  );
+}
+
+.admin-navbar {
+  background: var(--admin-surface);
+  border-color: var(--admin-border);
+  color: var(--admin-heading);
+}
+
+.admin-heading {
+  color: var(--admin-heading);
+}
+
+.admin-muted {
+  color: var(--admin-muted);
+}
+
+.admin-icon-button {
+  border-color: var(--admin-border);
+  color: var(--admin-heading);
+  background: transparent;
+}
+
+.admin-icon-button:hover {
+  border-color: var(--admin-accent);
+  color: var(--admin-accent);
+}
+
+.portfolio-shell {
+  background: var(--portfolio-page);
+  transition: background-color 300ms ease;
+}
+
+.home-theme-toggle {
+  backdrop-filter: blur(12px);
+}
+
+/* WhatsApp-style client chat surface */
+.chat-whatsapp [class~="bg-[#090909]"],
+.chat-whatsapp [class~="bg-[#070707]"] {
+  background: #ffffff !important;
+}
+
+.chat-whatsapp [class~="bg-white/[0.025]"],
+.chat-whatsapp [class~="bg-white/[0.035]"],
+.chat-whatsapp [class~="bg-white/[0.04]"],
+.chat-whatsapp [class~="bg-white/[0.03]"] {
+  background: #f0f2f5 !important;
+}
+
+.chat-whatsapp [class~="bg-[#4ade80]"] {
+  background: #d9fdd3 !important;
+  color: #111b21 !important;
+}
+
+.chat-whatsapp [class~="bg-[#4ade80]/10"],
+.chat-whatsapp [class~="bg-[#4ade80]/[0.08]"],
+.chat-whatsapp [class~="bg-[#4ade80]/[0.06]"] {
+  background: #d9fdd3 !important;
+}
+
+.chat-whatsapp [class~="text-[#4ade80]"],
+.chat-whatsapp [class~="text-[#4ade80]/60"] {
+  color: #128c7e !important;
+}
+
+.chat-whatsapp [class~="text-white"],
+.chat-whatsapp [class~="text-white/80"],
+.chat-whatsapp [class~="text-white/75"],
+.chat-whatsapp [class~="text-white/70"] {
+  color: #111b21 !important;
+}
+
+.chat-whatsapp [class~="text-white/55"],
+.chat-whatsapp [class~="text-white/45"],
+.chat-whatsapp [class~="text-white/40"],
+.chat-whatsapp [class~="text-white/35"],
+.chat-whatsapp [class~="text-white/30"],
+.chat-whatsapp [class~="text-white/25"],
+.chat-whatsapp [class~="text-white/20"],
+.chat-whatsapp [class~="text-white/15"] {
+  color: #667781 !important;
+}
+
+.chat-whatsapp [class~="border-white/10"],
+.chat-whatsapp [class~="border-white/[0.08]"],
+.chat-whatsapp [class~="border-white/[0.07]"] {
+  border-color: #d1d7db !important;
+}
+
+.chat-whatsapp [class~="border-[#4ade80]/20"],
+.chat-whatsapp [class~="border-[#4ade80]/30"] {
+  border-color: rgba(18, 140, 126, 0.3) !important;
+}
+
+.chat-whatsapp [class~="bg-[#111]/95"] {
+  background: rgba(255, 255, 255, 0.96) !important;
+}
+
+.chat-whatsapp [class~="bg-red-400/10"] {
+  background: #fff1f0 !important;
+}
+
+.chat-whatsapp .overflow-y-auto {
+  background-color: #efeae2;
+  background-image: radial-gradient(
+    rgba(84, 101, 111, 0.08) 1px,
+    transparent 1px
+  );
+  background-size: 20px 20px;
+}
+
+/* ── Custom Scrollbar — BYTECODE Portfolio ───────────────────────────────── */
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #4ade80 #0a0a0a;
+}
+
+/* Chrome / Safari / Edge */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+  border-left: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #4ade80 0%, rgba(132, 0, 255, 0.8) 100%);
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #86efac 0%, #a855f7 100%);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: #4ade80;
+}
+
+::-webkit-scrollbar-corner {
+  background: #0a0a0a;
+}
+
+/* Responsive live-chat polish */
+@media (max-width: 767px) {
+  .admin-navbar { top: 0; margin: 0 0 0.75rem; border-radius: 0 0 1.25rem 1.25rem; }
+  .admin-navbar > div { height: 4.5rem; padding-inline: 1rem; gap: 0.75rem; }
+  .admin-navbar h1 { max-width: 9rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 1.25rem; }
+  .admin-navbar p { font-size: 0.75rem; }
+  .admin-navbar .admin-profile { padding-right: 0.5rem; }
+  .admin-footer { display: none; }
+  .chat-dark { border: 0 !important; border-radius: 0 !important; }
+  .admin-shell main { min-width: 0; overflow-x: hidden; }
+  .admin-shell table { font-size: 0.8125rem; }
+  .chat-dark textarea { font-size: 16px; }
+}
+@media (min-width: 1024px) {
+  .chat-dark { border-radius: 20px; margin: 12px; height: calc(100% - 24px) !important; }
+}
+.chat-dark textarea:focus, .admin-search:focus { box-shadow: 0 0 0 3px color-mix(in srgb, var(--admin-accent, #4ade80) 18%, transparent); }
+.chat-dark button:focus-visible, .admin-shell button:focus-visible { outline: 2px solid #4ade80; outline-offset: 2px; }
