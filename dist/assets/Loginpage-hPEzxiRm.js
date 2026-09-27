@@ -1,4 +1,4 @@
-import{a as e}from"./rolldown-runtime-Cyuzqnbw.js";import{K as t}from"./icons-DEys5JSc.js";import{O as n,f as r,i,l as a,n as o,p as s,t as c,u as l,x as u}from"./react-aRLeHykK.js";import{a as d}from"./motion-PqCq2WR6.js";import{i as f}from"./admin.api-Dka4Wgpi.js";import{t as p}from"./AuthLayout-Ci-SWv0m.js";var m=e(t(),1),h=d();function g({label:e,type:t=`text`,name:n,value:i,onChange:o,placeholder:c,required:u=!0}){let[d,f]=(0,m.useState)(!1),p=t===`password`;return(0,h.jsxs)(`div`,{className:`mb-5`,children:[(0,h.jsx)(`label`,{htmlFor:n,className:`
+import{a as e}from"./rolldown-runtime-Cyuzqnbw.js";import{K as t}from"./icons-DEys5JSc.js";import{O as n,f as r,i,l as a,n as o,p as s,t as c,u as l,x as u}from"./react-8P7VqWzA.js";import{a as d}from"./motion-PqCq2WR6.js";import{i as f}from"./admin.api-d29JapV0.js";import{t as p}from"./AuthLayout-CWI8XzfB.js";var m=e(t(),1),h=d();function g({label:e,type:t=`text`,name:n,value:i,onChange:o,placeholder:c,required:u=!0}){let[d,f]=(0,m.useState)(!1),p=t===`password`;return(0,h.jsxs)(`div`,{className:`mb-5`,children:[(0,h.jsx)(`label`,{htmlFor:n,className:`
           mb-2
           block
           text-[10px]

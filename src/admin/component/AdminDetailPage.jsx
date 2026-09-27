@@ -138,7 +138,7 @@ export function AdminConversationPage() {
   return (
     <section className="mx-auto grid max-w-7xl gap-5 lg:grid-cols-[300px_1fr]">
       <aside
-        className="admin-surface-panel rounded-2xl border p-5"
+        className="admin-surface-panel rounded-2xl border p-4 sm:p-5"
         style={{ borderColor: "var(--admin-border)" }}
       >
         <Link to="/admin/conversations" className="admin-muted text-sm">
@@ -180,7 +180,7 @@ export function AdminConversationPage() {
         </dl>
       </aside>
       <main
-        className="admin-surface-panel flex min-h-[620px] flex-col overflow-hidden rounded-2xl border"
+        className="admin-surface-panel flex min-h-[520px] flex-col overflow-hidden rounded-2xl border sm:min-h-[620px]"
         style={{ borderColor: "var(--admin-border)" }}
       >
         <header
@@ -215,7 +215,7 @@ export function AdminConversationPage() {
         {error && <p className="px-5 text-sm text-red-400">{error}</p>}
         <form
           onSubmit={send}
-          className="flex gap-2 border-t p-4"
+          className="flex gap-2 border-t p-3 sm:p-4"
           style={{ borderColor: "var(--admin-border)" }}
         >
           <textarea
@@ -249,7 +249,7 @@ export function AdminClientPage() {
   return (
     <section className="mx-auto max-w-5xl space-y-6">
       <div
-        className="admin-surface-panel rounded-2xl border p-6"
+        className="admin-surface-panel rounded-2xl border p-4 sm:p-6"
         style={{ borderColor: "var(--admin-border)" }}
       >
         <p className="text-xs font-semibold tracking-[.2em] text-[#4ade80]">
@@ -258,7 +258,7 @@ export function AdminClientPage() {
         <h1 className="admin-heading mt-3 text-3xl font-semibold">
           {client.name}
         </h1>
-        <p className="admin-muted mt-2">
+        <p className="admin-muted mt-2 break-words text-sm sm:text-base">
           {client.email} · {client.phone || "No phone"} ·{" "}
           {client.companyName || "Independent"}
         </p>

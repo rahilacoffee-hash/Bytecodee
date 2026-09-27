@@ -236,14 +236,14 @@ export default function HomepageCms() {
           >
             WEBSITE CONTENT
           </p>
-          <h2 className="admin-heading mt-2 text-3xl font-semibold">
+          <h2 className="admin-heading mt-2 text-2xl font-semibold sm:text-3xl">
             Homepage CMS
           </h2>
           <p className="admin-muted mt-1 text-sm">
             Edit the live homepage, portfolio projects, stats, and testimonials.
           </p>
         </div>
-        <div className="flex flex-wrap gap-2">
+        <div className="admin-cms-actions flex flex-wrap gap-2">
           <Link
             to="/"
             target="_blank"

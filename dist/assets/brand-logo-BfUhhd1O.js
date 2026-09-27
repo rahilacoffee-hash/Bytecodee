@@ -1,0 +1,1 @@
+var e=`/assets/brand-logo-C3t2-c7r.webp`;export{e as t};

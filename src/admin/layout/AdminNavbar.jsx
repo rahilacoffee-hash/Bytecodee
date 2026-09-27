@@ -79,19 +79,19 @@ function AdminNavbar({ children, isNight, onThemeToggle }) {
     <header
       className={`admin-navbar sticky top-4 z-30 mx-4 mb-8 rounded-[24px] shadow-[0_20px_50px_rgba(0,0,0,0.06)] backdrop-blur-xl ${isNight ? "admin-navbar-night" : "admin-navbar-day"}`}
     >
-      <div className="flex h-20 items-center justify-between px-5 md:px-8">
+      <div className="flex h-20 min-w-0 items-center justify-between px-5 md:px-8">
         {/* Left */}
-        <div className="flex items-center gap-5">
+        <div className="flex min-w-0 items-center gap-3 sm:gap-5">
           {children}
 
-          <div>
+          <div className="min-w-0">
             <h1 className="admin-heading font-serif text-2xl">{pageTitle}</h1>
             <p className="admin-muted text-sm">Welcome back</p>
           </div>
         </div>
 
         {/* Right */}
-        <div className="flex items-center gap-3">
+        <div className="flex shrink-0 items-center gap-2 sm:gap-3">
           <ThemeToggle
             isNight={isNight}
             onToggle={onThemeToggle}
@@ -140,7 +140,7 @@ function AdminNavbar({ children, isNight, onThemeToggle }) {
 
               <ChevronDown
                 size={16}
-                className={`admin-muted transition-transform ${dropdown ? "rotate-180" : ""}`}
+                className={`admin-muted hidden transition-transform sm:block ${dropdown ? "rotate-180" : ""}`}
               />
             </button>
 

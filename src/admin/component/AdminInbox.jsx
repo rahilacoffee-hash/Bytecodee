@@ -147,7 +147,7 @@ export default function AdminInbox() {
   };
   return (
     <section
-      className="mx-auto h-[calc(100dvh-132px)] min-h-0 w-full max-w-[1440px] overflow-hidden rounded-2xl sm:rounded-[28px] border shadow-[0_24px_70px_rgba(0,0,0,.08)]"
+      className="admin-inbox mx-auto h-[calc(100dvh-132px)] min-h-0 w-full max-w-[1440px] overflow-hidden rounded-2xl sm:rounded-[28px] border shadow-[0_24px_70px_rgba(0,0,0,.08)]"
       style={{
         borderColor: "var(--admin-border)",
         background: "var(--admin-surface)",
@@ -249,7 +249,7 @@ export default function AdminInbox() {
                   </div>
                 </div>
                 <select
-                  className="admin-search max-w-[150px] rounded-xl border px-2 py-2 text-[11px] font-semibold"
+                  className="admin-search w-[118px] shrink-0 rounded-xl border px-2 py-2 text-[11px] font-semibold sm:w-[150px]"
                   value={chat.status}
                   onChange={change}
                 >

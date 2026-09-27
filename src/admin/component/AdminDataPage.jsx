@@ -411,7 +411,7 @@ export default function AdminDataPage({ type }) {
           >
             BYTECODEE CRM
           </p>
-          <h2 className="admin-heading mt-2 text-3xl font-semibold">
+          <h2 className="admin-heading mt-2 text-2xl font-semibold sm:text-3xl">
             {heading}
           </h2>
           <p className="admin-muted mt-1 text-sm">
@@ -433,7 +433,7 @@ export default function AdminDataPage({ type }) {
         </p>
       ) : (
         <Surface className="overflow-hidden">
-          <div className="overflow-x-auto">
+          <div className="admin-table-scroll overflow-x-auto" tabIndex="0">
             <table className="min-w-[760px] w-full text-left text-sm">
               <thead
                 className="admin-muted border-b text-[11px] uppercase tracking-wider"
@@ -615,7 +615,7 @@ export function DashboardHome() {
       className="mx-auto max-w-7xl space-y-6"
     >
       <div
-        className="rounded-3xl border p-7 md:p-9"
+        className="rounded-3xl border p-5 sm:p-7 md:p-9"
         style={{
           borderColor: "var(--admin-border)",
           background: "var(--admin-hero)",
@@ -627,7 +627,7 @@ export function DashboardHome() {
         >
           BYTECODEE ADMIN
         </p>
-        <h2 className="admin-heading mt-4 max-w-xl text-3xl font-semibold md:text-5xl">
+        <h2 className="admin-heading mt-4 max-w-xl text-3xl font-semibold sm:text-4xl md:text-5xl">
           A clear view of the work moving through your studio.
         </h2>
         <p className="admin-muted mt-4 max-w-xl text-sm leading-6">
@@ -677,13 +677,13 @@ export function DashboardHome() {
           {(data?.recentConversations || []).slice(0, 6).map((row) => (
             <div
               key={row.id}
-              className="flex items-center justify-between gap-4 p-5"
+              className="flex items-start justify-between gap-3 p-4 sm:items-center sm:p-5"
             >
-              <div>
+              <div className="min-w-0">
                 <p className="admin-heading text-sm font-medium">
                   {row.client?.name || "Client"}
                 </p>
-                <p className="admin-muted mt-1 text-xs">
+                <p className="admin-muted mt-1 truncate text-xs">
                   {serviceName(row.service)} ·{" "}
                   {row.messages?.[0]?.content || "No messages yet"}
                 </p>
