@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import BubbleMenu from "./BubbleMenu";
 import ThemeToggle from "./ThemeToggle";
 import { FiMenu, FiX } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 const items = [
   {
@@ -79,29 +80,9 @@ export default function Navbar({  }) {
             : "bg-transparent border-transparent"
         }`}
       >
-        {/* Logo — bracket monogram + wordmark */}
-        <div className="flex items-center gap-2.5 sm:gap-3 group cursor-default">
-          <div className="relative w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-white/5 border border-[#4ade80]/30 flex items-center justify-center backdrop-blur-sm group-hover:border-[#4ade80] group-hover:bg-[#4ade80]/10 transition-all duration-300">
-            <span
-              className="text-[#4ade80] font-bold text-[13px] sm:text-sm leading-none"
-              style={{ fontFamily: "'JetBrains Mono', monospace" }}
-            >
-              {"{}"}
-            </span>
-          </div>
-          <div className="flex items-center gap-1.5">
-            <span
-              className="text-white font-bold text-[13px] sm:text-[15px] tracking-[0.15em] uppercase"
-              style={{ fontFamily: "'Space Grotesk', sans-serif" }}
-            >
-              Bytecode
-            </span>
-            <span className="w-[6px] h-[6px] rounded-full bg-[#4ade80] animate-pulse shrink-0" />
-          </div>
-        </div>
 
         {/* Menu / Close — syntax-styled toggle */}
-        <div className="flex items-center gap-2">
+ <div className="flex items-center gap-2">
          
           <button
             onClick={() => setMenuOpen((prev) => !prev)}
@@ -129,7 +110,49 @@ export default function Navbar({  }) {
               )}
             </span>
           </button>
+        </div>       
+
+   
+     
+        {/* Logo — bracket monogram + wordmark */}
+        <div className="flex items-center gap-2.5 sm:gap-3 group cursor-default">
+          <div className="relative w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-white/5 border border-[#4ade80]/30 flex items-center justify-center backdrop-blur-sm group-hover:border-[#4ade80] group-hover:bg-[#4ade80]/10 transition-all duration-300">
+            <span
+              className="text-[#4ade80] font-bold text-[13px] sm:text-sm leading-none"
+              style={{ fontFamily: "'JetBrains Mono', monospace" }}
+            >
+              {"{}"}
+            </span>
+          </div>
+          <div className="flex items-center gap-1.5">
+            <span
+              className="text-white font-bold text-[13px] sm:text-[15px] tracking-[0.15em] uppercase"
+              style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+            >
+              Bytecode
+            </span>
+            <span className="w-[6px] h-[6px] rounded-full bg-[#4ade80] animate-pulse shrink-0" />
+          </div>
         </div>
+
+        <div className="flex items-center gap-2">
+         
+          <a
+            href="#pricing"
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
+            className="group text-white flex items-center gap-2 sm:gap-2.5 bg-white/5 hover:bg-white/10 border border-white/15 hover:border-[#4ade80]/50 rounded-full pl-3.5 sm:pl-4 pr-2 sm:pr-2.5 py-2 sm:py-2.5 backdrop-blur-sm transition-all duration-300"
+          >
+            Get started
+              <span
+              className="text-[#4ade80] font-bold text-[29px] sm:text-sm leading-none"
+              style={{ fontFamily: "'JetBrains Mono', monospace" }}
+            >
+              {">"}
+            </span>
+          </a>
+        </div>   
+
+        
       </nav>
     </>
   );

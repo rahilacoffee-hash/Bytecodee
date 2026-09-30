@@ -35,7 +35,7 @@ const Home = ({ isNight, onThemeToggle }) => {
         className={`portfolio-shell ${isNight ? "portfolio-night" : "portfolio-day"}`}
         style={{ opacity: loading ? 0 : 1, transition: "opacity 0.4s ease" }}
       >
-        <div className="relative h-screen overflow-hidden">
+        <div className="relative">
           <video
             className="absolute inset-0 w-full h-full object-cover z-0"
             src={content.hero.backgroundVideo}
